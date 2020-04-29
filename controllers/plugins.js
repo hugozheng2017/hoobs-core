@@ -159,8 +159,7 @@ module.exports = class PluginsController {
 
         Plugins.install(name, tag).then((results) => {
             if (results.success) {
-                HBS.log.info(`[${new Date().toLocaleString()}] Installed "${name}" package.`);
-                HBS.log.push.info(name, "Plugin successfully installed");
+                HBS.log.info(`Plugin "${name}" installed.`);
 
                 const installed = Plugins.list();
                 const version = installed[name] ? installed[name].version : null
@@ -245,7 +244,7 @@ module.exports = class PluginsController {
 
         Plugins.uninstall(name).then(async (results) => {
             if (results.success) {
-                HBS.log.info(`[${new Date().toLocaleString()}] "${name}" package removed.`);
+                HBS.log.info(`Plugin "${name}" removed.`);
                 HBS.log.push.warning(name, "Plugin successfully removed");
 
                 if (request.query.socketed === "true") {
@@ -323,7 +322,7 @@ module.exports = class PluginsController {
         }
 
         Plugins.update(name, tag).then(async (results) => {
-            HBS.log.info(`[${new Date().toLocaleString()}] "${name}" package updated.`);
+            HBS.log.info(`Plugin "${name}" updated.`);
 
             if (results.active > 0) {
                 HBS.log.push.warning("An install process is already running");
