@@ -54,8 +54,8 @@ export default {
     "ce": "ce", // "Chechen
     "zh": "zh", // "Chinese
     "zh-hk": "zh", // "Chinese (Hong Kong)
-    "zh-cn": "zh", // "Chinese (PRC)
-    "zh-sg": "zh", // "Chinese (Singapore)
+    "zh-cn": "zh-Hans", // "Chinese (PRC)
+    "zh-sg": "zh-Hans", // "Chinese (Singapore)
     "zh-tw": "zh", // "Chinese (Taiwan)
     "cv": "cv", // Chuvash
     "co": "co", // Corsican
